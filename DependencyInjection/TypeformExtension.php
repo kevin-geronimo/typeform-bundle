@@ -34,18 +34,18 @@ class TypeformExtension extends Extension
         $parameters = $config;
 
         // Defined Configuration
-        $container->setDefinition('typeform.configuration', new Definition('App\TypeformBundle\Core\Configuration', array(
+        $container->setDefinition('typeform.configuration', new Definition('TypeformBundle\Core\Configuration', array(
             $parameters,
             new Reference('router')
         )));
 
         // Define Client
-        $container->setDefinition('typeform.client', new Definition('App\TypeformBundle\Core\Client', array(
+        $container->setDefinition('typeform.client', new Definition('TypeformBundle\Core\Client', array(
             new Reference('typeform.configuration'),
         )));
 
         // Define Form Manager
-        $container->setDefinition('typeform.manager', new Definition('App\TypeformBundle\Core\Manager', array(
+        $container->setDefinition('typeform.manager', new Definition('TypeformBundle\Core\Manager', array(
             $forms,
             new Reference('typeform.client'),
         )));
