@@ -79,7 +79,7 @@ class Form
         }
 
         $this->entity = new $entity();
-        if ($this->entity instanceof BaseTypeform) {
+        if (!$this->entity instanceof BaseTypeform) {
             throw new \Exception('invalid entity must be extends BaseTypeform entity.');
         }
 
