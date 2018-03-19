@@ -1,0 +1,9 @@
+/.github/         export-ignore
+gitattributes     export-ignore
+gitignore         export-ignore
+.php_cs           export-ignore
+phpspec.ci.yml    export-ignore
+phpspec.yml.dist  export-ignore
+phpunit.xml.dist  export-ignore
+/spec/            export-ignore
+/Tests/           export-ignore

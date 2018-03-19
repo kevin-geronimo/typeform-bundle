@@ -1,0 +1,4 @@
+services:
+    App\TypeformBundle\Command\DumpFieldsCommand:
+        tags:
+            - { name: 'console.command', command: 'typeform:fields' }

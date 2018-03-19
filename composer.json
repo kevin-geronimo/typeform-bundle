@@ -1,0 +1,38 @@
+{
+  "name": "kevinbedev/typeform-bundle",
+  "type": "library",
+  "description": "Typeform Bundle",
+  "license": "MIT",
+  "require": {
+    "php": "^7.1",
+    "symfony/framework-bundle": "^3.0 || ^4.0",
+    "symfony/yaml": "^3.0 || ^4.0",
+    "doctrine/annotations": "^1.6",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "phpro/grumphp": "^0.14.0",
+    "symfony/phpunit-bridge": "^3.0 || ^4.0"
+  },
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "TypeformBundle\\": ""
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TypeformBundle\\Tests\\": "Tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-ci": "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml"
+  },
+  "prefer-stable": true
+}
