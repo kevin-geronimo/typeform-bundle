@@ -78,12 +78,10 @@ class Form
             throw new \Exception('invalid entity field must be an existing class.');
         }
 
-        $ref = new \ReflectionClass(get_class($entity));
-        if ($ref->isSubclassOf(BaseTypeform::class)) {
+        $this->entity = new $entity();
+        if ($this->entity instanceof BaseTypeform) {
             throw new \Exception('invalid entity must be extends BaseTypeform entity.');
         }
-
-        $this->entity = new $entity();
 
         $this->load();
         $this->entity->setForm($this->name);
