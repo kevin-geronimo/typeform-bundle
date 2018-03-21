@@ -2,8 +2,12 @@
 
 namespace TypeformBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Class BaseTypeform.
+ *
+ * @ORM\MappedSuperclass()
  */
 abstract class BaseTypeform
 {
